@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="WM Eletrônicos - A melhor loja de tecnologia com produtos de qualidade e preços especiais">
+    <meta name="keywords" content="eletrônicos, smartphones, notebooks, tecnologia, loja virtual">
+    <meta name="author" content="WM Eletrônicos">
+    
+    <!-- Meta Tags Otimizadas para Web -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="WM Eletrônicos">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WM Eletrônicos - Loja Virtual de Tecnologia">
+    <meta property="og:description" content="Os melhores produtos de tecnologia com qualidade garantida e preços especiais">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/000000/ffffff?text=WM+Eletrônicos">
+    <meta property="og:url" content="https://wmeletronicos01.netlify.app">
+    
+    <title>WM Eletrônicos - Loja Virtual de Tecnologia</title>
+    
+    <!-- CDN Otimizado -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzAwMDAwMCIvPgo8dGV4dCB4PSIxNiIgeT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMTQiPldNPC90ZXh0Pgo8L3N2Zz4K" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjQiIGZpbGw9IiMwMDAwMDAiLz4KPHRleHQgeD0iOTAiIHk9Ijk1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjQ1IiBsZXR0ZXItc3BhY2luZz0iMnB4Ij5XTTwvdGV4dD4KPC9zdmc+Cg==">
+    
+    <style>
+        /* Reset CSS Otimizado */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Variáveis CSS */
+        :root {
+            --primary: #d32f2f;
+            --secondary: #1a237e;
+            --accent: #00d4ff;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --error: #f44336;
+            --bg-dark: #000000;
+            --bg-light: #111111;
+            --bg-card: rgba(26, 26, 46, 0.95);
+            --text-light: #ffffff;
+            --text-muted: #cccccc;
+            --text-dark: #999999;
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Styles */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: var(--bg-dark);
+            overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container Responsivo */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Otimizações de Toque */
+        button, a, .clickable {
+            min-height: 44px;
+            min-width: 44px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Header Fixo e Responsivo */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--bg-dark);
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid transparent;
+            background-image: 
+                linear-gradient(var(--bg-dark), var(--bg-dark)), 
+                linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 0.75rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Logo Responsivo */
+        .logo h1 {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+            font-weight: 900;
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .logo span {
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
+            opacity: 0.9;
+            font-weight: 500;
+            display: block;
+            margin-top: -0.2rem;
+        }
+
+        /* Navegação Responsiva */
+        .nav {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: block;
+            }
+            
+            .nav ul {
+                display: flex;
+                list-style: none;
+                gap: 1.5rem;
+            }
+            
+            .nav a {
+                color: var(--text-light);
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                transition: var(--transition);
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+            
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateY(-2px);
+            }
+        }
+
+        /* Botões do Header */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-btn {
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: var(--text-light);
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            backdrop-filter: blur(15px);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header-btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+        }
+
+        .cart-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--error);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Hero Section Otimizado */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem 1rem 3rem;
+            background: var(--bg-dark);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            background: var(--bg-light);
+            padding: clamp(1.5rem, 5vw, 3rem);
+            border-radius: var(--radius);
+            border: 3px solid transparent;
+            background-image: 
+                linear-gradient(var(--bg-light), var(--bg-light)), 
+                linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h2 {
+            font-size: clamp(1.75rem, 6vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--text-light);
+            border: none;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.6);
+            filter: brightness(1.1);
+        }
+
+        /* Seção Produtos */
+        .products {
+            padding: clamp(3rem, 8vw, 5rem) 0;
+            background: 
+                radial-gradient(circle at 25% 75%, rgba(255, 0, 102, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(0, 150, 255, 0.1) 0%, transparent 60%),
+                linear-gradient(180deg, 
+                    rgba(15, 15, 35, 0.95) 0%, 
+                    rgba(26, 26, 46, 0.9) 50%, 
+                    rgba(22, 33, 62, 0.92) 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: clamp(2rem, 6vw, 4rem);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            background: linear-gradient(90deg, 
+                #ff0066, #00d4ff, #ffdd00, #8a2be2, 
+                #ff4500, #00ff7f, #ff1493, #1e90ff);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientSlide 4s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes gradientSlide {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Filtros Responsivos */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: clamp(2rem, 5vw, 4rem);
+            flex-wrap: wrap;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: clamp(2rem, 5vw, 4rem);
+        }
+
+        .filter-btn {
+            background: rgba(255,255,255,0.8);
+            border: 2px solid rgba(135,206,235,0.2);
+            color: #333;
+            padding: clamp(0.5rem, 2vw, 0.75rem) clamp(0.75rem, 3vw, 1.25rem);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: linear-gradient(135deg, #87ceeb 0%, #4169e1 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(135,206,235,0.4);
+        }
+
+        /* Grid Responsivo */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Card de Produto */
+        .product-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: clamp(1rem, 3vw, 1.5rem);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(25px);
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                0 8px 32px rgba(0, 150, 255, 0.3);
+            border-color: rgba(135, 206, 235, 0.4);
+        }
+
+        .product-image {
+            width: 100%;
+            height: clamp(180px, 25vw, 220px);
+            background: rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.3;
+        }
+
+        .product-price {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00ff7f 0%, #32cd32 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Botões */
+        .btn {
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            padding: clamp(0.75rem, 2vw, 0.875rem) clamp(1rem, 3vw, 1.5rem);
+            min-height: 44px;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .add-to-cart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .delete-product-btn {
+            background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .delete-product-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.6);
+        }
+
+        /* Indicadores */
+        .image-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: var(--error);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .image-indicator.new {
+            background: var(--success);
+            top: 8px;
+            left: 8px;
+            right: auto;
+        }
+
+        /* Seções Sobre e Contato */
+        .about, .contact {
+            padding: clamp(3rem, 8vw, 5rem) 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            text-align: center;
+        }
+
+        .about h2, .contact h2 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            margin-bottom: 2rem;
+            color: #87ceeb;
+            font-weight: 800;
+        }
+
+        .about p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 4vw, 2rem);
+            flex-wrap: wrap;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: var(--radius);
+            backdrop-filter: blur(10px);
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-dark);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: clamp(1rem, 4vw, 2rem);
+            right: clamp(1rem, 4vw, 2rem);
+            width: clamp(50px, 12vw, 60px);
+            height: clamp(50px, 12vw, 60px);
+            background: #25d366;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Notificação */
+        .notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 9999;
+            max-width: 300px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .notification.success {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+        }
+
+        .notification.error {
+            background: linear-gradient(135deg, #f44336, #da190b);
+        }
+
+        .notification.info {
+            background: linear-gradient(135deg, #2196f3, #0b7dda);
+        }
+
+        /* Responsividade Extrema */
+        @media (max-width: 320px) {
+            .hero-content {
+                padding: 1.5rem;
+            }
+            
+            .filters {
+                gap: 0.25rem;
+                padding: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Otimizações para Acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-dark: #000000;
+                --bg-light: #111111;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Print Styles */
+        @media print {
+            .header, .whatsapp-btn, .notification {
+                display: none !important;
+            }
+            
+            body {
+                color: black !important;
+                background: white !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>WM Eletrônicos</h1>
+                    <span>Sua loja de tecnologia</span>
+                </div>
+                
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="header-btn cart-btn" onclick="openCart()" title="Carrinho" aria-label="Abrir carrinho">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count-text">(<span id="cart-count">0</span>)</span>
+                        <span class="cart-count" id="cart-count-badge">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h2>Bem-vindo à WM Eletrônicos</h2>
+                <p>Os melhores produtos de tecnologia com qualidade garantida e preços especiais. Sua satisfação é nossa prioridade!</p>
+                <button class="cta-btn" onclick="scrollToProducts()" aria-label="Ver produtos disponíveis">
+                    <i class="fas fa-shopping-bag"></i>
+                    Ver Produtos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            
+            <!-- Filtros -->
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterProducts('all')" data-filter="all" aria-label="Ver todos os produtos">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('smartphones')" data-filter="smartphones" aria-label="Ver smartphones">Smartphones</button>
+                <button class="filter-btn" onclick="filterProducts('notebooks')" data-filter="notebooks" aria-label="Ver notebooks">Notebooks</button>
+                <button class="filter-btn" onclick="filterProducts('acessorios')" data-filter="acessorios" aria-label="Ver acessórios">Acessórios</button>
+                <button class="filter-btn" onclick="filterProducts('eletronicos')" data-filter="eletronicos" aria-label="Ver eletrônicos">Eletrônicos</button>
+            </div>
+            
+            <!-- Grid de Produtos -->
+            <div class="products-grid" id="products-grid" role="list">
+                <div class="loading">Carregando produtos...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>
+                A WM Eletrônicos é uma empresa especializada em tecnologia, oferecendo os melhores
+                produtos do mercado com qualidade garantida e preços competitivos. Com anos de experiência
+                no setor, nossa missão é proporcionar a melhor experiência de compra para nossos clientes.
+                Trabalhamos com as melhores marcas e oferecemos assistência técnica especializada.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> contato@wmeletronicos.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 WM Eletrônicos. Todos os direitos reservados.</p>
+            <p>Desenvolvido com tecnologia moderna e responsiva</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <button class="whatsapp-btn" onclick="contactWhatsApp()" title="Falar no WhatsApp" aria-label="Entrar em contato pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- JavaScript Otimizado -->
+    <script>
+        // Configurações e dados
+        const CONFIG = {
+            whatsappNumber: '5511999999999',
+            animationDelay: 100,
+            notificationDuration: 3000
+        };
+
+        let products = [
+            {
+                id: 1,
+                name: 'iPhone 14 Pro Max',
+                price: 7999.90,
+                category: 'smartphones',
+                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-deeppurple?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1663703841896',
+                isPromotion: true,
+                isNew: false
+            },
+            {
+                id: 2,
+                name: 'Samsung Galaxy S24 Ultra',
+                price: 6999.00,
+                category: 'smartphones',
+                image: 'https://images.samsung.com/is/image/samsung/p6pim/br/2401/gallery/br-galaxy-s24-ultra-s928-sm-s928bzkezbr-539187803?$650_519_PNG$',
+                isPromotion: false,
+                isNew: true
+            },
+            {
+                id: 3,
+                name: 'MacBook Air M3',
+                price: 14999.00,
+                category: 'notebooks',
+                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653084303665',
+                isPromotion: false,
+                isNew: true
+            },
+            {
+                id: 4,
+                name: 'Dell XPS 15',
+                price: 12999.99,
+                category: 'notebooks',
+                image: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/black/xps-15-9530-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000',
+                isPromotion: true,
+                isNew: false
+            },
+            {
+                id: 5,
+                name: 'AirPods Pro 2ª Gen',
+                price: 2899.00,
+                category: 'acessorios',
+                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1660803972361',
+                isPromotion: true,
+                isNew: false
+            },
+            {
+                id: 6,
+                name: 'Sony WH-1000XM5',
+                price: 2199.90,
+                category: 'acessorios',
+                image: 'https://m.media-amazon.com/images/I/61vNLJf5FnL._AC_SL1500_.jpg',
+                isPromotion: false,
+                isNew: true
+            },
+            {
+                id: 7,
+                name: 'iPad Pro M2',
+                price: 8999.00,
+                category: 'eletronicos',
+                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-13-select-wifi-spacegray-202210?wid=940&hei=1112&fmt=png-alpha&.v=1664411207213',
+                isPromotion: false,
+                isNew: false
+            },
+            {
+                id: 8,
+                name: 'Apple Watch Series 9',
+                price: 4799.00,
+                category: 'acessorios',
+                image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT3J3ref_VW_34FR+watch-45-alum-midnight-nc-9s_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1%2C0&fmt=p-jpg&qlt=95&.v=1694507270866',
+                isPromotion: true,
+                isNew: true
+            }
+        ];
+
+        let cart = [];
+        let currentFilter = 'all';
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        function initializeApp() {
+            renderProducts();
+            updateCartCount();
+            initializeIntersectionObserver();
+            optimizeForDevice();
+        }
+
+        // Otimizações para dispositivo
+        function optimizeForDevice() {
+            const isMobile = window.innerWidth <= 768;
+            const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+            
+            if (isMobile) {
+                document.body.classList.add('mobile');
+                optimizeForTouch();
+            }
+            
+            if (isTablet) {
+                document.body.classList.add('tablet');
+            }
+        }
+
+        function optimizeForTouch() {
+            // Prevenir zoom duplo toque em botões
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+        }
+
+        // Intersection Observer para animações
+        function initializeIntersectionObserver() {
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('fade-in');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+                );
+
+                // Observar elementos que devem animar
+                document.querySelectorAll('.product-card, .about, .contact').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+        }
+
+        // Renderizar produtos
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            let filteredProducts = products;
+            
+            if (currentFilter !== 'all') {
+                filteredProducts = products.filter(product => product.category === currentFilter);
+            }
+            
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <i class="fas fa-search"></i>
+                        <h3>Nenhum produto encontrado</h3>
+                        <p>Tente selecionar outro filtro ou volte mais tarde.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card fade-in" data-category="${product.category}" role="listitem">
+                    <div class="product-image">
+                        <img src="${product.image}" 
+                             alt="${product.name}" 
+                             onerror="handleImageError(this, '${product.name}')" 
+                             loading="lazy"
+                             decoding="async">
+                        ${product.isPromotion ? '<div class="image-indicator">OFERTA</div>' : ''}
+                        ${product.isNew ? '<div class="image-indicator new">NOVO</div>' : ''}
+                    </div>
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-price">R$ ${formatPrice(product.price)}</p>
+                    <button class="btn add-to-cart" onclick="addToCart(${product.id})" aria-label="Adicionar ${product.name} ao carrinho">
+                        <i class="fas fa-cart-plus"></i> 
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            `).join('');
+
+            // Re-observar novos elementos
+            if ('IntersectionObserver' in window) {
+                initializeIntersectionObserver();
+            }
+        }
+
+        // Formatar preço
+        function formatPrice(price) {
+            return price.toFixed(2).replace('.', ',');
+        }
+
+        // Tratar erro de imagem
+        function handleImageError(img, productName) {
+            const placeholder = img.parentElement;
+            placeholder.innerHTML = `
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 1rem; border-radius: var(--radius);">
+                    <div>
+                        <i class="fas fa-image" style="display: block; margin-bottom: 0.5rem; font-size: 2.5rem; opacity: 0.8;"></i>
+                        <div style="font-size: 0.8rem; font-weight: 600; line-height: 1.2;">${productName}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Filtrar produtos
+        function filterProducts(category) {
+            currentFilter = category;
+            
+            // Atualizar botões ativos
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-filter="${category}"]`).classList.add('active');
+            
+            // Adicionar efeito de loading
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '<div class="loading">Filtrando produtos...</div>';
+            
+            // Renderizar com delay para suavidade
+            setTimeout(() => {
+                renderProducts();
+            }, 200);
+        }
+
+        // Adicionar ao carrinho
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({...product, quantity: 1});
+            }
+            
+            updateCartCount();
+            showNotification(`${product.name} adicionado ao carrinho!`, 'success');
+            
+            // Efeito visual no botão
+            const button = event.target.closest('.add-to-cart');
+            button.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                button.style.transform = '';
+            }, 150);
+        }
+
+        // Atualizar contador do carrinho
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            const countElement = document.getElementById('cart-count');
+            const badgeElement = document.getElementById('cart-count-badge');
+            
+            countElement.textContent = count;
+            
+            if (count > 0) {
+                badgeElement.style.display = 'flex';
+                badgeElement.textContent = count;
+            } else {
+                badgeElement.style.display = 'none';
+            }
+        }
+
+        // Abrir carrinho
+        function openCart() {
+            if (cart.length === 0) {
+                showNotification('Seu carrinho está vazio!', 'info');
+                return;
+            }
+            
+            const items = cart.map(item => 
+                `${item.quantity}x ${item.name} - R$ ${formatPrice(item.price * item.quantity)}`
+            ).join('\n');
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            const message = `🛒 *Pedido da WM Eletrônicos*\n\n${items}\n\n💰 *Total: R$ ${formatPrice(total)}*\n\n✅ Gostaria de finalizar esta compra!`;
+            
+            if (confirm(`🛒 Seu Carrinho:\n\n${items}\n\n💰 Total: R$ ${formatPrice(total)}\n\nDeseja finalizar pelo WhatsApp?`)) {
+                const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                
+                // Limpar carrinho após envio
+                cart = [];
+                updateCartCount();
+                showNotification('Pedido enviado via WhatsApp! 🎉', 'success');
+            }
+        }
+
+        // Contato WhatsApp
+        function contactWhatsApp() {
+            const message = '👋 Olá! Tenho interesse nos produtos da WM Eletrônicos. Poderia me ajudar?';
+            const whatsappUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Scroll suave para produtos
+        function scrollToProducts() {
+            const element = document.getElementById('produtos');
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Sistema de notificações otimizado
+        function showNotification(message, type = 'info') {
+            // Remover notificação existente
+            const existing = document.querySelector('.notification');
+            if (existing) {
+                existing.remove();
+            }
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'polite');
+            
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-exclamation-circle',
+                info: 'fa-info-circle'
+            };
+            
+            notification.innerHTML = `
+                <i class="fas ${icons[type] || icons.info}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remover
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.opacity = '0';
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, CONFIG.notificationDuration);
+        }
+
+        // Otimizações de performance
+        let ticking = false;
+        let lastScrollY = window.scrollY;
+
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    const header = document.querySelector('.header');
+                    
+                    // Ocultar/mostrar header baseado no scroll
+                    if (scrollY > lastScrollY && scrollY > 100) {
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        header.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollY = scrollY;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        // Event listeners otimizados
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        window.addEventListener('resize', debounce(() => {
+            optimizeForDevice();
+        }, 250));
+
+        // Utility: Debounce
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Preload de imagens importantes
+        function preloadImages() {
+            const imagesToPreload = products.slice(0, 4).map(p => p.image);
+            imagesToPreload.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        }
+
+        // Inicializar preload após carregamento
+        window.addEventListener('load', preloadImages);
+
+        // Tratamento de erros globais
+        window.addEventListener('error', (event) => {
+            console.error('Global error:', event.error);
+            showNotification('Ops! Algo deu errado. Tente novamente.', 'error');
+        });
+
+        // Tratamento de promises rejeitadas
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('Unhandled promise rejection:', event.reason);
+            event.preventDefault();
+        });
+
+        // Analytics básico (se necessário)
+        function trackEvent(eventName, properties = {}) {
+            console.log('Event:', eventName, properties);
+            // Aqui você pode integrar com Google Analytics, etc.
+        }
+
+        // Track eventos importantes
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart')) {
+                trackEvent('add_to_cart', {
+                    product_id: e.target.onclick.toString().match(/\d+/)[0]
+                });
+            }
+        });
+    </script>
+</body>
+</html>
